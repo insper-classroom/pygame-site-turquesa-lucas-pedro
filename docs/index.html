@@ -36,6 +36,7 @@
         <a href="#equipe">Equipe</a>
         <a href="#devlog">Log</a>
         <a href="#galeria">Galeria</a>
+        <a class="nav-download" href="#download">Download</a>
       </nav>
     </header>
 
@@ -55,7 +56,7 @@
             Zarpe rumo ao Super Pirate World! Reviva a era de ouro dos 16 bits com uma jogabilidade refinada, níveis desafiadores e toda a agilidade de um verdadeiro pirata em busca de glória.
           </p>
           <div class="hero-actions" aria-label="Ações principais">
-            <a class="button button-primary" href="#galeria">Jogar Agora</a>
+            <a class="button button-primary" href="#download">Jogar Agora</a>
             <a
               class="button button-ghost button-github"
               href="https://github.com/insper-classroom/pygame-jogo-turquesa-lucas-pedro"
@@ -375,6 +376,101 @@
             <div class="gallery-card placeholder reveal" data-tilt aria-label="Screenshot futura da caverna da maré negra">
               <span>Caverna da Maré</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-download" id="download" aria-labelledby="download-title">
+        <div class="wave-divider wave-divider-top" aria-hidden="true"></div>
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Download / Instruções</p>
+            <h2 id="download-title">Como zarpar com Captain Cannonball</h2>
+            <p>
+              Prepare seu ambiente, instale as dependências e execute o jogo
+              seguindo este mapa do tesouro passo a passo.
+            </p>
+          </div>
+
+          <div class="install-guide">
+            <article class="download-card reveal antique-border">
+              <div>
+                <p class="eyebrow">Pacote do jogo</p>
+                <h3>1. Baixe e Extraia o Jogo</h3>
+                <p>
+                  Clique no botão para baixar o arquivo .zip. Quando o download
+                  terminar, clique com o botão direito no arquivo e escolha
+                  "Extrair aqui", ou extraia para uma pasta de sua preferência.
+                </p>
+              </div>
+              <!-- Para trocar o arquivo depois, substitua o href abaixo pelo ZIP final em docs/downloads/. -->
+              <a
+                class="button button-primary button-download"
+                href="downloads/captain-cannonball.zip"
+                download
+                aria-label="Baixar arquivo ZIP do Captain Cannonball"
+              >
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42l2.3 2.3V4a1 1 0 0 1 1-1Zm-7 14a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Z"
+                  />
+                </svg>
+                Baixar .zip
+              </a>
+            </article>
+
+            <ol class="install-steps" aria-label="Passos para executar o jogo">
+              <li class="install-step reveal" data-tilt>
+                <span>02</span>
+                <div>
+                  <h3>Verifique o seu Python</h3>
+                  <p>
+                    Certifique-se de ter o Python 3.12 instalado no computador.
+                    Se ainda não tiver, baixe pelo site oficial do Python.
+                  </p>
+                  <a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer">
+                    Abrir python.org
+                  </a>
+                  <p>
+                    No Windows, marque a opção "Add Python to PATH" antes de
+                    concluir a instalação.
+                  </p>
+                </div>
+              </li>
+
+              <li class="install-step reveal" data-tilt>
+                <span>03</span>
+                <div>
+                  <h3>Abra o terminal na pasta do jogo</h3>
+                  <p>
+                    Navegue até a pasta onde os arquivos foram extraídos. Abra o
+                    Terminal no Linux/Mac ou o Prompt de Comando/PowerShell no
+                    Windows diretamente nessa pasta.
+                  </p>
+                </div>
+              </li>
+
+              <li class="install-step reveal" data-tilt>
+                <span>04</span>
+                <div>
+                  <h3>Instale as dependências</h3>
+                  <p>O motor do jogo usa a biblioteca Pygame-CE. No terminal, execute:</p>
+                  <pre><code>pip install pygame-ce</code></pre>
+                </div>
+              </li>
+
+              <li class="install-step reveal" data-tilt>
+                <span>05</span>
+                <div>
+                  <h3>Levante âncora e jogue</h3>
+                  <p>Com tudo pronto, inicie a aventura executando o arquivo principal:</p>
+                  <pre><code>python main.py</code></pre>
+                  <p>Dependendo do sistema operacional, pode ser necessário usar:</p>
+                  <pre><code>python3 main.py</code></pre>
+                </div>
+              </li>
+            </ol>
           </div>
         </div>
       </section>
