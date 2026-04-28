@@ -33,7 +33,7 @@
       <nav class="site-nav" aria-label="Seções do site">
         <a href="#sobre">Sobre</a>
         <a href="#mundo">Mundo</a>
-        <a href="#personagem">Herói</a>
+        <a href="#equipe">Equipe</a>
         <a href="#galeria">Galeria</a>
       </nav>
     </header>
@@ -55,7 +55,21 @@
           </p>
           <div class="hero-actions" aria-label="Ações principais">
             <a class="button button-primary" href="#galeria">Jogar Agora</a>
-            <a class="button button-ghost" href="#sobre">Em Breve</a>
+            <a
+              class="button button-ghost button-github"
+              href="https://github.com/insper-classroom/pygame-jogo-turquesa-lucas-pedro"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir repositório do Captain Cannonball no GitHub"
+            >
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M12 0.3a12 12 0 0 0-3.79 23.39c0.6 0.11 0.82-0.26 0.82-0.58v-2.03c-3.34 0.73-4.04-1.61-4.04-1.61-0.55-1.39-1.33-1.76-1.33-1.76-1.09-0.74 0.08-0.73 0.08-0.73 1.2 0.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 0.99 0.11-0.78 0.42-1.3 0.76-1.6-2.66-0.3-5.47-1.33-5.47-5.93 0-1.31 0.47-2.38 1.24-3.22-0.12-0.3-0.54-1.52 0.12-3.18 0 0 1.01-0.32 3.3 1.23a11.4 11.4 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23 0.66 1.66 0.24 2.88 0.12 3.18 0.77 0.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.49 5.92 0.43 0.37 0.81 1.1 0.81 2.22v3.29c0 0.32 0.22 0.69 0.83 0.57A12 12 0 0 0 12 0.3Z"
+                />
+              </svg>
+              GitHub
+            </a>
           </div>
         </div>
 
@@ -136,40 +150,47 @@
         </div>
       </section>
 
-      <section class="section section-character" id="personagem" aria-labelledby="character-title">
-        <div class="section-inner character-layout">
-          <div class="character-stage reveal" data-tilt>
-            <div class="moon-glow" aria-hidden="true"></div>
-            <img
-              class="character-sprite"
-              src="personagem.png"
-              alt="Pirata protagonista em pixel art com chapéu largo e espada"
-            />
-            <div class="shadow-spot" aria-hidden="true"></div>
+      <section class="section section-team" id="equipe" aria-labelledby="team-title">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Equipe</p>
+            <h2 id="team-title">A tripulação por trás do Captain Cannonball</h2>
+            <p>
+              Projeto desenvolvido no 1º semestre de Ciência da Computação no Insper,
+              unindo programação, game design e apresentação web.
+            </p>
           </div>
 
-          <div class="copy-block reveal antique-border">
-            <p class="eyebrow">Personagem</p>
-            <h2 id="character-title">Capitão Nilo, o último cartógrafo livre</h2>
-            <p>
-              Pequeno no tamanho, imenso na teimosia. Nilo carrega uma lâmina
-              de abordagem e um mapa incompleto herdado de uma tripulação
-              desaparecida. Cada ilha vencida revela uma nova coordenada.
-            </p>
-            <div class="ability-list" aria-label="Habilidades do personagem">
-              <div>
-                <strong>Dash de Convés</strong>
-                <span>Avança sobre abismos curtos e evita serras em movimento.</span>
+          <div class="team-grid" aria-label="Desenvolvedores do projeto">
+            <article class="team-card reveal" data-tilt>
+              <div class="team-photo" aria-hidden="true">
+                <span>LI</span>
               </div>
-              <div>
-                <strong>Corte de Maré</strong>
-                <span>Golpe rápido para abrir caminho entre inimigos e caixas seladas.</span>
+              <div class="team-info">
+                <p class="eyebrow">Desenvolvedor</p>
+                <h3>Lucas Ibanez</h3>
+                <p>
+                  Atuou no desenvolvimento do site e do jogo, trabalhando na
+                  experiência visual, estrutura da página e implementação do projeto.
+                </p>
+                <span>1º semestre de Ciência da Computação · Insper</span>
               </div>
-              <div>
-                <strong>Olho de Cartógrafo</strong>
-                <span>Revela moedas e rotas secretas próximas.</span>
+            </article>
+
+            <article class="team-card reveal" data-tilt>
+              <div class="team-photo" aria-hidden="true">
+                <span>PZ</span>
               </div>
-            </div>
+              <div class="team-info">
+                <p class="eyebrow">Desenvolvedor</p>
+                <h3>Pedro Zanin</h3>
+                <p>
+                  Atuou no desenvolvimento do jogo, contribuindo para a lógica,
+                  mecânicas e construção da experiência jogável.
+                </p>
+                <span>1º semestre de Ciência da Computação · Insper</span>
+              </div>
+            </article>
           </div>
         </div>
       </section>
