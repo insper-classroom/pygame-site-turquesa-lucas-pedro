@@ -34,6 +34,7 @@
         <a href="#sobre">Sobre</a>
         <a href="#mundo">Mundo</a>
         <a href="#equipe">Equipe</a>
+        <a href="#devlog">Log</a>
         <a href="#galeria">Galeria</a>
       </nav>
     </header>
@@ -190,6 +191,145 @@
                 </p>
                 <span>1º semestre de Ciência da Computação · Insper</span>
               </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-log" id="devlog" aria-labelledby="devlog-title">
+        <div class="wave-divider wave-divider-top" aria-hidden="true"></div>
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Log de Desenvolvimento</p>
+            <h2 id="devlog-title">O diário de bordo do Captain Cannonball</h2>
+            <p>
+              Registro das principais entregas feitas durante a criação do jogo,
+              organizado por período, mensagem de commit e responsável.
+            </p>
+          </div>
+
+          <div class="devlog" aria-label="Registro de commits do projeto">
+            <article class="log-period reveal" data-tilt>
+              <header>
+                <time datetime="2026-04-22">22/04/2026</time>
+                <span>até</span>
+                <time datetime="2026-04-23">23/04/2026</time>
+                <strong>Fundação e Renderização</strong>
+              </header>
+              <ol class="log-list">
+                <li>
+                  <span class="commit-type feat">feat</span>
+                  <p>Configuração do ambiente PyGame-CE, display surface e game loop principal.</p>
+                  <small>Lucas</small>
+                </li>
+                <li>
+                  <span class="commit-type feat">feat</span>
+                  <p>Implementação do parser de arquivos .tmx (Tiled) para renderização modular de mapas.</p>
+                  <small>Pedro</small>
+                </li>
+                <li>
+                  <span class="commit-type feat">feat</span>
+                  <p>Criação da classe base do Player e sistema de carregamento de pastas de sprites.</p>
+                  <small>Lucas</small>
+                </li>
+              </ol>
+            </article>
+
+            <article class="log-period reveal" data-tilt>
+              <header>
+                <time datetime="2026-04-24">24/04/2026</time>
+                <span>até</span>
+                <time datetime="2026-04-25">25/04/2026</time>
+                <strong>Física e Colisão</strong>
+              </header>
+              <ol class="log-list">
+                <li>
+                  <span class="commit-type feat">feat</span>
+                  <p>Implementação de movimentação baseada em Delta Time para consistência de framerate.</p>
+                  <small>Pedro</small>
+                </li>
+                <li>
+                  <span class="commit-type feat">feat</span>
+                  <p>Adição de gravidade e separação do sistema de colisão em eixos (horizontal/vertical).</p>
+                  <small>Pedro</small>
+                </li>
+                <li>
+                  <span class="commit-type feat">feat</span>
+                  <p>Sistema de gerenciamento de estados de animação do jogador (Idle, Run, Jump, Fall).</p>
+                  <small>Lucas</small>
+                </li>
+              </ol>
+            </article>
+
+            <article class="log-period reveal" data-tilt>
+              <header>
+                <time datetime="2026-04-26">26/04/2026</time>
+                <span>até</span>
+                <time datetime="2026-04-27">27/04/2026</time>
+                <strong>Combate e Mecânicas Avançadas</strong>
+              </header>
+              <ol class="log-list">
+                <li>
+                  <span class="commit-type feat">feat</span>
+                  <p>Lógica de pulo duplo e sistema de Wall Jump com timers de controle (cooldown).</p>
+                  <small>Lucas</small>
+                </li>
+                <li>
+                  <span class="commit-type feat">feat</span>
+                  <p>Criação da mecânica de ataque (espada) com aplicação de knockback nos inimigos.</p>
+                  <small>Pedro</small>
+                </li>
+                <li>
+                  <span class="commit-type feat">feat</span>
+                  <p>Implementação de inimigos patrulheiros (IA básica) e armadilhas (espinhos e serras).</p>
+                  <small>Lucas</small>
+                </li>
+              </ol>
+            </article>
+
+            <article class="log-period reveal" data-tilt>
+              <header>
+                <time datetime="2026-04-28">28/04/2026</time>
+                <span>até</span>
+                <time datetime="2026-04-29">29/04/2026</time>
+                <strong>Exploração, UI e Overworld</strong>
+              </header>
+              <ol class="log-list">
+                <li>
+                  <span class="commit-type feat">feat</span>
+                  <p>Desenvolvimento do sistema do Overworld para navegação e desbloqueio de fases.</p>
+                  <small>Pedro</small>
+                </li>
+                <li>
+                  <span class="commit-type feat">feat</span>
+                  <p>Criação de itens coletáveis (moedas, pérolas e poções) com detecção de proximidade.</p>
+                  <small>Lucas</small>
+                </li>
+                <li>
+                  <span class="commit-type feat">feat</span>
+                  <p>Implementação do HUD na tela (sistema de corações para HP e contador de moedas).</p>
+                  <small>Pedro</small>
+                </li>
+              </ol>
+            </article>
+
+            <article class="log-period reveal" data-tilt>
+              <header>
+                <time datetime="2026-04-30">30/04/2026</time>
+                <strong>Áudio e Polimento Final</strong>
+              </header>
+              <ol class="log-list">
+                <li>
+                  <span class="commit-type feat">feat</span>
+                  <p>Integração da trilha sonora (Starlight City) e efeitos sonoros (SFX) vinculados a ações.</p>
+                  <small>Lucas</small>
+                </li>
+                <li>
+                  <span class="commit-type fix">fix</span>
+                  <p>Ajustes finos nas hitboxes (rects), correção de bugs de colisão em cantos e otimização geral.</p>
+                  <small>Pedro</small>
+                </li>
+              </ol>
             </article>
           </div>
         </div>
