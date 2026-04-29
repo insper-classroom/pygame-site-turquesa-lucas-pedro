@@ -1417,6 +1417,103 @@ h3 {
   line-height: 1.55;
 }
 
+.crap-comparison {
+  margin-top: 1.4rem;
+}
+
+.crap-comparison-heading {
+  max-width: 52rem;
+  margin: 0 auto 1rem;
+  text-align: center;
+}
+
+.crap-comparison-heading h3 {
+  margin-bottom: 0.55rem;
+  font-size: 1.45rem;
+}
+
+.crap-comparison-heading p:last-child {
+  margin-bottom: 0;
+  color: var(--color-muted);
+}
+
+.crap-comparison-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.crap-screen {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid rgba(244, 191, 69, 0.3);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(145deg, rgba(216, 195, 157, 0.1), rgba(16, 27, 51, 0.82)),
+    var(--color-ink);
+  box-shadow: var(--shadow-deep);
+  transform-style: preserve-3d;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  will-change: transform;
+}
+
+.crap-screen::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(180deg, rgba(8, 11, 22, 0.12), transparent 34%, rgba(8, 11, 22, 0.5)),
+    radial-gradient(circle at 50% 100%, rgba(244, 191, 69, 0.12), transparent 54%);
+}
+
+.crap-screen:hover {
+  border-color: rgba(244, 191, 69, 0.76);
+  box-shadow: var(--shadow-gold), var(--shadow-deep);
+}
+
+.crap-screen img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 620ms ease, filter 620ms ease;
+}
+
+.crap-screen:hover img {
+  filter: saturate(1.1) contrast(1.06);
+  transform: scale(1.025);
+}
+
+.screen-tag {
+  position: absolute;
+  top: 0.8rem;
+  left: 0.8rem;
+  z-index: 2;
+  padding: 0.28rem 0.58rem;
+  color: var(--color-ink);
+  background: linear-gradient(180deg, #fff1a8, var(--color-gold) 54%, #c8712c);
+  border: 1px solid #fff0ad;
+  border-radius: 999px;
+  box-shadow: var(--shadow-gold);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.crap-screen figcaption {
+  position: relative;
+  z-index: 2;
+  padding: 0.78rem 0.9rem;
+  color: var(--color-muted);
+  background: rgba(8, 11, 22, 0.76);
+  border-top: 1px solid rgba(244, 191, 69, 0.22);
+  font-size: 1rem;
+}
+
 .site-footer {
   position: relative;
   z-index: 2;
@@ -1629,6 +1726,14 @@ h3 {
   }
 
   .crap-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .crap-comparison {
+    margin-top: 2rem;
+  }
+
+  .crap-comparison-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
