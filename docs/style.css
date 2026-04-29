@@ -558,6 +558,13 @@ h3 {
     radial-gradient(circle at 80% 40%, rgba(143, 164, 197, 0.14), transparent 28rem);
 }
 
+.section-crap {
+  background:
+    radial-gradient(circle at 16% 22%, rgba(244, 191, 69, 0.11), transparent 24rem),
+    radial-gradient(circle at 84% 64%, rgba(185, 120, 116, 0.13), transparent 27rem),
+    linear-gradient(180deg, #090c18, #101b33 52%, #0b1022);
+}
+
 .section-inner {
   width: min(100%, var(--content-width));
   margin-inline: auto;
@@ -866,11 +873,12 @@ h3 {
 .team-photo {
   position: relative;
   display: grid;
-  min-height: 16rem;
-  place-items: center;
+  height: clamp(11.5rem, 30vw, 14rem);
+  min-height: 0;
+  margin: 0;
   overflow: hidden;
   background:
-    radial-gradient(circle at 50% 42%, rgba(244, 191, 69, 0.2), transparent 8rem),
+    radial-gradient(circle at 50% 20%, rgba(244, 191, 69, 0.2), transparent 9rem),
     linear-gradient(180deg, rgba(143, 164, 197, 0.2), rgba(16, 27, 51, 0.2)),
     repeating-linear-gradient(90deg, rgba(216, 195, 157, 0.08) 0 2px, transparent 2px 56px),
     repeating-linear-gradient(0deg, rgba(216, 195, 157, 0.06) 0 2px, transparent 2px 56px);
@@ -879,24 +887,37 @@ h3 {
 .team-photo::before {
   position: absolute;
   inset: 1rem;
+  z-index: 2;
   content: "";
-  border: 1px dashed rgba(244, 191, 69, 0.42);
+  border: 1px solid rgba(244, 191, 69, 0.5);
   border-radius: calc(var(--radius) - 2px);
+  box-shadow: inset 0 0 24px rgba(244, 191, 69, 0.08);
 }
 
-.team-photo span {
-  position: relative;
-  display: grid;
-  width: 6rem;
-  height: 6rem;
-  place-items: center;
-  color: var(--color-ink);
-  background: linear-gradient(180deg, #ffe68c, var(--color-gold) 54%, #c8712c);
-  border: 2px solid #fff0ad;
-  border-radius: 50%;
-  box-shadow: var(--shadow-gold);
-  font-family: var(--font-title);
-  font-size: 2rem;
+.team-photo::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(180deg, transparent 48%, rgba(8, 11, 22, 0.52)),
+    radial-gradient(circle at 50% 18%, transparent 28%, rgba(8, 11, 22, 0.16) 82%);
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: center 16%;
+  filter: saturate(1.03) contrast(1.04);
+  transition: transform 620ms ease, filter 620ms ease;
+}
+
+.team-card:hover .team-photo img {
+  filter: saturate(1.1) contrast(1.08);
+  transform: scale(1.035);
 }
 
 .team-info {
@@ -1296,6 +1317,106 @@ h3 {
   line-height: 1.05;
 }
 
+.crap-overview {
+  max-width: 58rem;
+  margin: 0 auto 1rem;
+  padding: 1.1rem;
+  background:
+    linear-gradient(135deg, rgba(216, 195, 157, 0.1), rgba(16, 27, 51, 0.82)),
+    repeating-linear-gradient(45deg, rgba(244, 191, 69, 0.05) 0 1px, transparent 1px 12px);
+  box-shadow: var(--shadow-deep);
+}
+
+.crap-overview p {
+  margin-bottom: 0;
+  color: var(--color-muted);
+  font-size: 1.1rem;
+}
+
+.crap-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.15rem;
+}
+
+.crap-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.95rem;
+  align-items: start;
+  min-height: 14rem;
+  padding: 1.1rem;
+  overflow: hidden;
+  border: 1px solid rgba(244, 191, 69, 0.3);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(145deg, rgba(216, 195, 157, 0.1), rgba(16, 27, 51, 0.82)),
+    radial-gradient(circle at 24% 20%, rgba(244, 191, 69, 0.12), transparent 14rem),
+    var(--color-surface);
+  box-shadow: var(--shadow-deep);
+  transform-style: preserve-3d;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  will-change: transform;
+}
+
+.crap-card::before {
+  position: absolute;
+  inset: 0.65rem;
+  pointer-events: none;
+  content: "";
+  border: 1px solid rgba(242, 240, 213, 0.08);
+  border-radius: calc(var(--radius) - 2px);
+}
+
+.crap-card::after {
+  position: absolute;
+  inset: auto 0 0;
+  height: 0.2rem;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgba(244, 191, 69, 0.72), transparent);
+  opacity: 0.7;
+}
+
+.crap-card:hover {
+  border-color: rgba(244, 191, 69, 0.76);
+  box-shadow: var(--shadow-gold), var(--shadow-deep);
+}
+
+.crap-letter {
+  display: grid;
+  width: 3.1rem;
+  height: 3.1rem;
+  place-items: center;
+  color: var(--color-ink);
+  background: linear-gradient(180deg, #fff1a8, var(--color-gold) 54%, #c8712c);
+  border: 2px solid #fff0ad;
+  border-radius: 50%;
+  box-shadow: var(--shadow-gold);
+  font-family: var(--font-title);
+  font-size: 1.55rem;
+  line-height: 1;
+  transform: translateZ(20px);
+}
+
+.crap-card .eyebrow {
+  margin-bottom: 0.3rem;
+  font-size: 0.72rem;
+}
+
+.crap-card h3 {
+  margin-bottom: 0.55rem;
+  font-size: 1.12rem;
+  line-height: 1.12;
+}
+
+.crap-card p:last-child {
+  margin-bottom: 0;
+  color: var(--color-muted);
+  line-height: 1.55;
+}
+
 .site-footer {
   position: relative;
   z-index: 2;
@@ -1480,6 +1601,10 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .team-photo {
+    height: 14.5rem;
+  }
+
   .download-card {
     grid-template-columns: minmax(0, 1fr) auto;
     padding: 1.5rem;
@@ -1497,6 +1622,14 @@ h3 {
 
   .gallery-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .crap-overview {
+    padding: 1.5rem;
+  }
+
+  .crap-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .gallery-card.large {
