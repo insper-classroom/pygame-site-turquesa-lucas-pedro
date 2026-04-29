@@ -124,11 +124,22 @@
           </div>
 
           <div class="map-showcase reveal">
-            <figure class="map-frame" data-tilt>
-              <img
-                src="mapa.png"
-                alt="Mapa do jogo com plataformas suspensas, palmeiras, céu tropical e estrutura de tijolos"
-              />
+            <figure class="map-frame video-frame" data-tilt>
+              <video
+                class="world-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                controls
+                preload="metadata"
+                poster="img/img_mapa_1.png"
+                aria-label="Vídeo de gameplay do Captain Cannonball mostrando fases, plataformas e desafios"
+              >
+                <source src="videos/video_site.mp4" type="video/mp4" />
+                Seu navegador não suporta vídeo HTML5.
+              </video>
+              <figcaption>Gameplay em movimento</figcaption>
             </figure>
 
             <div class="region-list" aria-label="Regiões do mapa">

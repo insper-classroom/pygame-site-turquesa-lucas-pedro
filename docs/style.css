@@ -689,6 +689,19 @@ h3 {
   box-shadow: var(--shadow-deep), inset 0 0 0 1px rgba(255, 247, 218, 0.12);
 }
 
+.map-frame.video-frame::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(180deg, rgba(8, 11, 22, 0.06), rgba(8, 11, 22, 0.42)),
+    radial-gradient(circle at 50% 0%, rgba(244, 191, 69, 0.18), transparent 36%);
+  opacity: 0.82;
+  transition: opacity var(--transition);
+}
+
 .map-frame img {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -697,9 +710,28 @@ h3 {
   transition: transform 600ms ease, filter 600ms ease;
 }
 
+.world-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--color-ink);
+  filter: saturate(1.08) contrast(1.06);
+  transition: transform 600ms ease, filter 600ms ease;
+}
+
 .map-frame:hover img {
   filter: saturate(1.12) contrast(1.08);
   transform: scale(1.035);
+}
+
+.map-frame.video-frame:hover::before {
+  opacity: 0.42;
+}
+
+.map-frame.video-frame:hover .world-video {
+  filter: saturate(1.16) contrast(1.1);
+  transform: scale(1.018);
 }
 
 .map-frame figcaption,
